@@ -1,15 +1,16 @@
-现在是 Vibe Coding 的时代，想自己搭建项目变得越来越方便。
+# Admin-Java-Spring
 
 ## 项目技术栈（企业主流选型）
+
 | 技术 | 版本 / 说明 |
 | --- | --- |
-| >开发框架 | >Spring Boot 3.2.5 |
-| >权限框架 | >Spring Security 6 |
-| >ORM 框架 | >MyBatis-Plus 3.5.8 |
-| >数据库 | >MySQL 8.0 |
-| >工具库 | >Hutool、Lombok |
-| >接口规范 | >RESTful 企业级标准 |
-| >构建工具 | >Maven 3.6+ |
+| 开发框架 | Spring Boot 3.2.5 |
+| 权限框架 | Spring Security 6 |
+| ORM 框架 | MyBatis-Plus 3.5.8 |
+| 数据库 | MySQL 8.0 |
+| 工具库 | Hutool、Lombok |
+| 接口规范 | RESTful 企业级标准 |
+| 构建工具 | Maven 3.6+ |
 
 
 ## 项目结构（标准企业级分层）
