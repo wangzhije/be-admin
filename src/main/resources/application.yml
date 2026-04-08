@@ -1,0 +1,42 @@
+# 服务器配置
+server:
+  port: 8080
+#  servlet:
+#    context-path: /admin-api
+# Spring 核心配置
+spring:
+  #  数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/admin_start?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root       # 改成你的数据库用户名
+    password: root       # 改成你的数据库密码
+  # Jackson序列化配置
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+# MyBatis-Plus配置
+mybatis-plus:
+  # mapper.xml文件路径
+  mapper-locations: classpath:mapper/*.xml
+  # 实体类别名包
+  type-aliases-package: com.wangzhijie.admin.entity
+  configuration:
+    # 开启驼峰命名转换
+    map-underscore-to-camel-case: true
+    # 打印SQL（开发环境开启，生产关闭）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # 全局主键自增
+      id-type: auto
+      # 逻辑删除字段
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+# 日志配置
+logging:
+  level:
+    com.wangzhijie.admin: info
+    org.springframework.web: warn
+    org.springframework.security: debug
